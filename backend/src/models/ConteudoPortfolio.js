@@ -1,6 +1,4 @@
 
-import { randomUUID } from "node:crypto";
-
 const AREAS_VALIDAS = [
   "Humanas",
   "Linguagens",
@@ -39,7 +37,6 @@ export default class ConteudoPortfolio {
       throw new Error("A descrição é obrigatória.");
     }
 
-    this.id = randomUUID();
     this.secao = secao;
     this.bimestre = bimestre;
     this.area_conhecimento = area_conhecimento;

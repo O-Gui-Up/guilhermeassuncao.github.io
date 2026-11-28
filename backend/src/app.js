@@ -1,7 +1,9 @@
 
 import express from "express";
 import cors from "cors";
+
 import conteudoPortfolioRoutes from "./routes/conteudoPortfolioRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 
@@ -15,5 +17,6 @@ app.get("/api/status", (req, res) => {
 });
 
 app.use("/api/portfolio/conteudo", conteudoPortfolioRoutes);
+app.use("/api/auth", authRoutes);
 
 export default app;
